@@ -1,2 +1,0 @@
-# lapo
-Cooperative Dev

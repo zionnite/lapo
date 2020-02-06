@@ -11,7 +11,7 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Lapo">
-    <title>Lapo | Add Transaction</title>
+    <title>Lapo | Post Transaction</title>
     <!-- Icons-->
     <link rel="icon" type="image/ico" href="./img/favicon.ico" sizes="any" />
     <link href="assets/css/coreui-icons.min.css" rel="stylesheet">
@@ -113,7 +113,7 @@
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
                                 <a class="nav-link" href="create_user.html">
-                                    <i class="nav-icon icon-note"></i> Add Member
+                                    <i class="nav-icon icon-note"></i> New Member
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -129,7 +129,7 @@
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
                                 <a class="nav-link" href="add_transaction.html">
-                                    <i class="nav-icon icon-note"></i> Add Transaction
+                                    <i class="nav-icon icon-note"></i> Post Transaction
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -145,7 +145,7 @@
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
                                 <a class="nav-link" href="prepare.html">
-                                    <i class="nav-icon icon-note"></i> Add Loan
+                                    <i class="nav-icon icon-note"></i> Prepare Loan
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -163,9 +163,6 @@
             <!-- Breadcrumb-->
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">Home</li>
-                <li class="breadcrumb-item">
-                    <a href="#">Admin</a>
-                </li>
                 <li class="breadcrumb-item active">Transaction</li>
                 <!-- Breadcrumb Menu-->
                 <li class="breadcrumb-menu d-md-down-none">
@@ -179,46 +176,59 @@
                             <i class="icon-graph"></i>  Transaction
                         </a>
                         <a class="btn" href="#">
-                            <i class="icon-settings"></i>  Add Transaction</a>
+                            <i class="icon-settings"></i>  Post Transaction</a>
                     </div>
                 </li>
             </ol>
             <div class="container-fluid">
                 <div class="animated fadeIn">
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-sm-10">
                             <div class="card">
                                 <div class="card-header">
                                     <strong>Transaction</strong>
                                 </div>
                                 <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="company">Transaction Type</label>
-                                        <select name="gender" class="form-control">
-                                            <option>Select Type</option>
-                                            <option value="Savings">Savings</option>
-                                            <option value="Withdrawal">Withdrawal</option>
-                                            <option value="Loans Repayment">Loans Repayment</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="vat">Account No</label>
-                                        <input class="form-control" id="vat" type="text" placeholder="Account Number">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="street">Amount</label>
-                                        <input class="form-control" id="street" type="text" placeholder="Amount">
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group col-sm-12">
-                                            <label for="city">Date</label>
-                                            <input class="form-control" id="city" type="date" placeholder="date">
+                                   <div class="form-group row">
+                                        <label for="amount" class="col-md-2 col-form-label">Member ID</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control" id="amount" type="text" placeholder="Member ID">
                                         </div>
 
                                     </div>
 
+                                    <div class="form-group row">
+                                        <label for="company" class="col-md-2 col-form-label">Transaction Type</label>
+                                        <div class="col-md-10">
+                                            <select name="gender" class="form-control">
+                                                <option>Select Type</option>
+                                                <option value="Savings">Savings</option>
+                                                <option value="Withdrawal">Withdrawal</option>
+                                                <option value="Loans Repayment">Loans Repayment</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="vat" class="col-md-2 col-form-label">Account No</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control" id="vat" type="text" placeholder="Account Number">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="street" class="col-md-2 col-form-label">Amount</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control" id="street" type="text" placeholder="Amount">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="city" class="col-md-2 col-form-label">Date</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control" id="city" type="date" placeholder="date">
+                                        </div>
+                                    </div>
 
-                                    <input type="submit" name="submit" class="btn btn-danger" value="Add Transaction" />
+
+                                    <input type="submit" name="submit" class="btn btn-danger" value="Post Transaction" />
                                 </div>
                             </div>
                         </div>
