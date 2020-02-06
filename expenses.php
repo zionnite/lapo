@@ -14,7 +14,7 @@
 	<div class="app-body">
 		<?php require 'zenq/ui/sidebar.php';?>
 
-		<!-- THE EXPENSES VIEW -->
+		<!-- THE VIEW -->
 		<?php require 'zenq/view/expenses.php';?>
 
 	</div>
