@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Lapo">
+    <title>Lapo | View User</title>
+    <!-- Icons-->
+    <link rel="icon" type="image/ico" href="./img/favicon.ico" sizes="any" />
+    <link href="assets/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="assets/css/flag-icon.min.css" rel="stylesheet">
+
+    <!-- Main styles for this application-->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/5f98ed3b44.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+        <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img class="navbar-brand-full" src="assets/img/brand/logo_2.jpeg" width="115" height="55px" alt="CoreUI Logo">
+            <img class="navbar-brand-minimized" src="assets/img/brand/logo_2.jpeg" width="115" height="55px" alt="CoreUI Logo">
+        </a>
+        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="nav navbar-nav d-md-down-none">
+            <li class="nav-item px-3">
+                <a class="nav-link" href="#">Dashboard</a>
+            </li>
+<!--
+            <li class="nav-item px-3">
+                <a class="nav-link" href="#">Contribution</a>
+            </li>
+-->
+            <li class="nav-item px-3">
+                <a class="nav-link" href="#">Account</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bell-o"></i>
+                    <span class="badge badge-pill badge-danger">5</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header text-center">
+                        <strong>Notification Alert</strong>
+                    </div>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa fa-bell-o"></i> Updates
+                        <span class="badge badge-info">42</span>
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img class="img-avatar" src="assets/img/avatars/6.jpg" alt="">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header text-center">
+                        <strong>Account</strong>
+                    </div>
+
+                    <a class="dropdown-item" href="view_account.html">
+                        <i class="fa fa-user"></i> View Profile
+                    </a>
+                    <a class="dropdown-item" href="login.html">
+                        <i class="fa fa-lock"></i> Logout
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+    </header>
+    <div class="app-body">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="nav-icon icon-speedometer"></i> Dashboard
+                            <!--<span class="badge badge-primary">NEW</span>-->
+                        </a>
+                    </li>
+<!--
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="nav-icon icon-speedometer"></i> Contributions
+                        </a>
+                    </li>
+-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_account.html">
+                            <i class="nav-icon icon-speedometer"></i> Accounts
+                        </a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="nav-icon icon-note"></i> Members</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="create_user.html">
+                                    <i class="nav-icon icon-note"></i> New Member
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="view_user.html">
+                                    <i class="nav-icon icon-note"></i> View Member
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="nav-icon icon-note"></i> Transaction</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="add_transaction.html">
+                                    <i class="nav-icon icon-note"></i> Post Transaction
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="view_transaction.html">
+                                    <i class="nav-icon icon-note"></i> View Transaction
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="nav-icon icon-note"></i> Loans</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="prepare.html">
+                                    <i class="nav-icon icon-note"></i> Prepare Loan
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="view_loan.html">
+                                    <i class="nav-icon icon-note"></i> View Loans
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+        </div>
+        <main class="main">
+            <!-- Breadcrumb-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item active">Dashboard</li>
+                <!-- Breadcrumb Menu-->
+                <li class="breadcrumb-menu d-md-down-none">
+                    <div class="btn-group" role="group" aria-label="Button group">
+                        <a class="btn" href="#">
+                            <i class="icon-speech"></i>
+                        </a>
+                        <a class="btn" href="./">
+                            <i class="icon-graph"></i>  Dashboard</a>
+                        <a class="btn" href="#">
+                            <i class="icon-settings"></i>  Expenses</a>
+                    </div>
+                </li>
+            </ol>
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <img src="assets/img/avatars/8.jpg" class="img-circle" style="width:150px; height: 50px;" />
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <h4>Full Name</h4>
+                                                    <h6>Group Name</h6>
+                                                    <h6>Gender,Years</h6>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <a href="#" class="btn btn-success">View All Loans</a>
+                                                    <a href="#" class="btn btn-primary">View All Savings</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="row">
+
+                                                <div class="col-md-10">
+                                                    <h4>Address Details</h4>
+                                                    <h6>Address</h6>
+                                                    <h6>City</h6>
+                                                    <h6>Province</h6>
+                                                    <h6>Zip Code</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="row">
+
+                                                <div class="col-md-10">
+                                                    <h4>Contact Details</h4>
+                                                    <h6>Landline</h6>
+                                                    <h6>Email</h6>
+                                                    <h6>Phone Number</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="card text-white bg-white">
+                                <div class="card-body">
+                                    <div class="form-group row ml-2">
+                                        <input class="col-md-6 form-control" id="" type="text" placeholder="Search for...">
+                                        <div class="col-md-2">
+                                            <input type="submit" value="Search" class="btn btn-success form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <table class="table table-responsive-sm table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Released</th>
+                                                <th>Maturity</th>
+                                                <th>Repayment</th>
+                                                <th>Principal</th>
+                                                <th>Fees</th>
+                                                <th>Penality</th>
+                                                <th>Due</th>
+                                                <th>Paid</th>
+                                                <th>Balance</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Jacital Emma </td>
+                                                <td>10/03/2020 </td>
+                                                <td>10/03/2020 </td>
+                                                <td>Monthly</td>
+                                                <td>2,000<br />@20% per Year</td>
+                                                <td>300</td>
+                                                <td>0</td>
+                                                <td>2,500</td>
+                                                <td>2,300</td>
+                                                <td>400</td>
+                                                <td><span class="badge badge-success">Open</span></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active show" data-toggle="tab" href="#repayment" role="tab" aria-controls="home" aria-selected="true">Repayment</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#loan_term" role="tab" aria-controls="profile" aria-selected="false">Loan Terms</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#loan_schedule" role="tab" aria-controls="messages" aria-selected="false">Loan Schedule</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#loan_collateral" role="tab" aria-controls="messages" aria-selected="false">Loan Collateral</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#loan_files" role="tab" aria-controls="messages" aria-selected="false">Loan Files</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#loan_comments" role="tab" aria-controls="messages" aria-selected="false">Loan Comments</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active show" id="repayment" role="tabpanel">
+                                    <!---Fill it up-->
+
+                                    <div class="col-sm-12">
+                                       <a href="#" class="btn btn-primary mb-4">Add Repayment</a>
+                                        <div class="card">
+                                            <h6>Search Found 5 Results</h6>
+                                            <div class="card-body">
+                                                <table class="table table-responsive-sm table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Name</th>
+                                                            <th>Loan</th>
+                                                            <th>Method</th>
+                                                            <th>Collected By</th>
+                                                            <th>Collection Date</th>
+                                                            <th>Paid Amount</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Jacital Emma </td>
+                                                            <td>a1000001 </td>
+                                                            <td>cash</td>
+                                                            <td>Jake Copeland</td>
+                                                            <td>01/2/2020</td>
+                                                            <td>540</td>
+                                                            <td><a href="#">Edit</a> || <a href="#">Delete</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jacital Emma </td>
+                                                            <td>a1000001 </td>
+                                                            <td>cash</td>
+                                                            <td>Jake Copeland</td>
+                                                            <td>01/2/2020</td>
+                                                            <td>540</td>
+                                                            <td><a href="#">Edit</a> || <a href="#">Delete</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <ul class="pagination">
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">Prev</a>
+                                                    </li>
+                                                    <li class="page-item active">
+                                                        <a class="page-link" href="#">1</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">2</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">3</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">4</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">Next</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="loan_term" role="tabpanel">
+                                    <!---Fill it up-->
+                                    <h3>Loan Terms</h3>
+                                </div>
+                                <div class="tab-pane" id="loan_schedule" role="tabpanel">
+                                    <!---Fill it up-->
+                                    <h3>Loan Schedule</h3>
+                                </div>
+                                <div class="tab-pane" id="loan_collateral" role="tabpanel">
+                                    <!---Fill it up-->
+                                    <h3>Loan Collateral</h3>
+                                </div>
+                                <div class="tab-pane" id="loan_files" role="tabpanel">
+                                    <!---Fill it up-->
+                                    <h3>Loan Files</h3>
+                                </div>
+                                <div class="tab-pane" id="loan_comments" role="tabpanel">
+                                    <!---Fill it up-->
+                                    <h3>Loan Comments</h3>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="app-footer">
+        <div>
+            <span>&copy; 2020 Lapo.</span>
+        </div>
+        <div class="ml-auto">
+            <span>Powered by</span>
+            <a href="#">Cooperative Dev</a>
+        </div>
+    </footer>
+    <!-- CoreUI and necessary plugins-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/pace.min.js"></script>
+    <script src="assets/js/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/coreui.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="assets/js/custom-tooltips.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
