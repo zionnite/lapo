@@ -134,6 +134,26 @@
                   									<i class="fas fa-dot-circle"></i> View Loans
                   								</a>
                   							</li>
+                  							<li class="nav-item">
+                  								<a class="nav-link" href="view_loan.html">
+                  									<i class="fas fa-dot-circle"></i> Due Loans
+                  								</a>
+                  							</li>
+                  							<li class="nav-item">
+                  								<a class="nav-link" href="view_loan.html">
+                  									<i class="fas fa-dot-circle"></i> Missed Repayment
+                  								</a>
+                  							</li>
+                  							<li class="nav-item">
+                  								<a class="nav-link" href="view_loan.html">
+                  									<i class="fas fa-dot-circle"></i> Loans in Arrears
+                  								</a>
+                  							</li>
+                  							<li class="nav-item">
+                  								<a class="nav-link" href="view_loan.html">
+                  									<i class="fas fa-dot-circle"></i> Loan Calculator
+                  								</a>
+                  							</li>
                   						</ul>
                   					</li>
                   					<li class="nav-item">
