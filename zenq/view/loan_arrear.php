@@ -15,7 +15,7 @@
 						<i class="icon-graph"></i>  Loans
 					</a>
 					<a class="btn" href="#">
-						<i class="icon-settings"></i> Missed Replacement</a>
+						<i class="icon-settings"></i> Loan Arrears</a>
 					</div>
 				</li>
 			</ol>
@@ -25,7 +25,7 @@
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<strong>Missed Replacement
+									<strong>Loans Arrears
 									    <small>Loans that are overdue and have not received any payment for the last collection date. If you enter a part-payment for the last collection date for a loan, it wil be marked as Arrears status instead.</small>
 									</strong>
 								</div>
