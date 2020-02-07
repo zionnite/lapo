@@ -46,11 +46,11 @@
         											<tbody>
         												<tr>
         													<td>
-        														<a href="view_account.html">
+        														<a href="member.php">
         															223231122
         														</a>
         													</td>
-        													<td>Kingsley Otasowie</td>
+        													<td>Nosakhare A.E Zionnite</td>
         													<td>50,000.00 NGN</td>
         													<td>10%</td>
         													<td>4 Months</td>
@@ -58,11 +58,11 @@
         												</tr>
         												<tr>
         													<td>
-        														<a href="view_account.html">
+        														<a href="member.php">
         															0122018827
         														</a>
         													</td>
-        													<td>Jennifer John</td>
+        													<td>Tony Osawere</td>
         													<td>50,000.00 NGN</td>
         													<td>10%</td>
         													<td>4 Months</td>
