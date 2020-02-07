@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<title>Lapo | Missed Replacement</title>
+	<title>Lapo | Bulk Upload - Borrower CSV</title>
 	<?php require 'zenq/ui/css.php';?>
 
 </head>
@@ -15,7 +15,7 @@
 	<div class="app-body">
 		<?php require 'zenq/ui/sidebar.php';?>
 		<!-- THE VIEW -->
-		<?php require 'zenq/view/missed_replacement.php';?>
+		<?php require 'zenq/view/bulk-upload-borrower-csv.php';?>
 
 	</div>
 	<?php require 'zenq/ui/footer.php';?>

@@ -139,7 +139,7 @@
 								<div class="tab-pane active show" id="repayment" role="tabpanel">
 									<!---Fill it up-->
 									<div class="col-sm-12">
-										<a href="member_transaction.php" class="btn btn-primary mb-4">Add Repayment</a>
+										<a href="member-transaction.php" class="btn btn-primary mb-4">Add Repayment</a>
 										<div class="card">
 											<h6>Search Found 5 Results</h6>
 											<div class="card-body">

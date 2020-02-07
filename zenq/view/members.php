@@ -12,7 +12,7 @@
                   				<a class="btn" href="./">
                   					<i class="icon-graph"></i>  Dashboard</a>
                   					<a class="btn" href="#">
-                  						<i class="icon-settings"></i>  Viewing All User</a>
+                  						<i class="icon-settings"></i>  Viewing All Member</a>
                   					</div>
                   				</li>
                   			</ol>
@@ -30,7 +30,7 @@
                   						<div class="col-sm-12">
                   							<div class="card">
                   								<div class="card-header">
-                  									<i class="fa fa-align-justify"></i> Showing all User</div>
+                  									<i class="fa fa-align-justify"></i> Showing all Member</div>
                   									<div class="card-body">
                   										<table class="table table-responsive-sm table-striped">
                   											<thead>
@@ -62,6 +62,8 @@
                   															<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   																<a class="dropdown-item" href="#">View Savings</a>
                   																<a class="dropdown-item" href="#">View Loans</a>
+                  																<a class="dropdown-item" href="#">View Loans Interest</a>
+                  																<a class="dropdown-item" href="#">View Dividends</a>
                   																<a class="dropdown-item" href="#">View Profile</a>
                   															</div>
                   														</div>
@@ -83,6 +85,8 @@
                   															<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   																<a class="dropdown-item" href="#">View Savings</a>
                   																<a class="dropdown-item" href="#">View Loans</a>
+                  																<a class="dropdown-item" href="#">View Loans Interest</a>
+                  																<a class="dropdown-item" href="#">View Dividends</a>
                   																<a class="dropdown-item" href="#">View Profile</a>
                   															</div>
                   														</div>

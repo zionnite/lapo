@@ -15,7 +15,7 @@
 	<div class="app-body">
 		<?php require 'zenq/ui/sidebar.php';?>
 		<!-- THE VIEW -->
-		<?php require 'zenq/view/loan_due.php';?>
+		<?php require 'zenq/view/loan-due.php';?>
 
 	</div>
 	<?php require 'zenq/ui/footer.php';?>

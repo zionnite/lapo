@@ -69,7 +69,7 @@
                   					</a>
                   				</li>
                   				<li class="nav-item">
-                  					<a class="nav-link" href="view_all_members.php">
+                  					<a class="nav-link" href="members.php">
                   						<i class="fas fa-dot-circle"></i> View all Members
                   					</a>
                   				</li>
@@ -92,32 +92,32 @@
                   							<i class="fas fa-file-upload"></i> Bulk Upload</a>
                   							<ul class="nav-dropdown-items">
                   								<li class="nav-item">
-                  									<a class="nav-link" href="bulk_uplaod_borrower_csv.php">
+                  									<a class="nav-link" href="bulk-upload-borrower-csv.php">
                   										<i class="fas fa-dot-circle"></i> Upload Borrowers from CSV/Excel
                   									</a>
                   								</li>
                   								<li class="nav-item">
-                  									<a class="nav-link" href="bulk_uplaod_borrower_csv.php">
+                  									<a class="nav-link" href="bulk-upload-borrower-csv.php">
                   										<i class="fas fa-dot-circle"></i> Upload Loans from CSV/Excel
                   									</a>
                   								</li>
                   								<li class="nav-item">
-                  									<a class="nav-link" href="bulk_uplaod_borrower_csv.php">
+                  									<a class="nav-link" href="bulk-upload-borrower-csv.php">
                   										<i class="fas fa-dot-circle"></i> Upload Repayments from CSV/Excel
                   									</a>
                   								</li>
                   								<li class="nav-item">
-                  									<a class="nav-link" href="bulk_uplaod_borrower_csv.php">
+                  									<a class="nav-link" href="bulk-upload-borrower-csv.php">
                   										<i class="fas fa-dot-circle"></i> Upload Expenses from CSV/Excel
                   									</a>
                   								</li>
                   								<li class="nav-item">
-                  									<a class="nav-link" href="bulk_uplaod_borrower_csv.php">
+                  									<a class="nav-link" href="bulk-upload-borrower-csv.php">
                   										<i class="fas fa-dot-circle"></i> Upload Savings Accounts from CSV/Excel
                   									</a>
                   								</li>
                   								<li class="nav-item">
-                  									<a class="nav-link" href="bulk_uplaod_borrower_csv.php">
+                  									<a class="nav-link" href="bulk-upload-borrower-csv.php">
                   										<i class="fas fa-dot-circle"></i> Upload Savings Transactions from CSV/Excel
                   									</a>
                   								</li>
@@ -140,22 +140,22 @@
                   								</a>
                   							</li>
                   							<li class="nav-item">
-                  								<a class="nav-link" href="loan_due.php">
+                  								<a class="nav-link" href="loan-due.php">
                   									<i class="fas fa-dot-circle"></i> Due Loans
                   								</a>
                   							</li>
                   							<li class="nav-item">
-                  								<a class="nav-link" href="missed_replacement.php">
+                  								<a class="nav-link" href="missed-replacement.php">
                   									<i class="fas fa-dot-circle"></i> Missed Repayment
                   								</a>
                   							</li>
                   							<li class="nav-item">
-                  								<a class="nav-link" href="loan_arrear.php">
+                  								<a class="nav-link" href="loan-arrear.php">
                   									<i class="fas fa-dot-circle"></i> Loans in Arrears
                   								</a>
                   							</li>
                   							<li class="nav-item">
-                  								<a class="nav-link" href="loan_calculator.php">
+                  								<a class="nav-link" href="loan-calculator.php">
                   									<i class="fas fa-dot-circle"></i> Loan Calculator
                   								</a>
                   							</li>
@@ -182,7 +182,7 @@
                   						<i class="fas fa-briefcase"></i> Inventory</a>
                   						<ul class="nav-dropdown-items">
                   							<li class="nav-item">
-                  								<a class="nav-link" href="add_inventory.php">
+                  								<a class="nav-link" href="add-inventory.php">
                   									<i class="fas fa-dot-circle"></i> Add Inventory
                   								</a>
                   							</li>
