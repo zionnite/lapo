@@ -12,7 +12,7 @@
         				<a class="btn" href="./">
         					<i class="icon-graph"></i>  Dashboard</a>
         					<a class="btn" href="#">
-        						<i class="icon-settings"></i>  View All Loans</a>
+        						<i class="icon-settings"></i>  View All Members</a>
         					</div>
         				</li>
         			</ol>
@@ -30,7 +30,7 @@
         						<div class="col-sm-12">
         							<div class="card">
         								<div class="card-header">
-        									<i class="fa fa-align-justify"></i> View all Loans</div>
+        									<i class="fa fa-align-justify"></i> View all Members</div>
         									<div class="card-body">
         										<table class="table table-responsive-sm table-striped">
         											<thead>
@@ -46,11 +46,11 @@
         											<tbody>
         												<tr>
         													<td>
-        														<a href="view_account.html">
+        														<a href="member.php">
         															223231122
         														</a>
         													</td>
-        													<td>Kingsley Otasowie</td>
+        													<td>Nosakhare A.E Zionnite</td>
         													<td>50,000.00 NGN</td>
         													<td>10%</td>
         													<td>4 Months</td>
@@ -58,14 +58,26 @@
         												</tr>
         												<tr>
         													<td>
-        														<a href="view_account.html">
-        															0122018827
+        														<a href="member.php">
+        															222211111
         														</a>
         													</td>
-        													<td>Jennifer John</td>
-        													<td>50,000.00 NGN</td>
-        													<td>10%</td>
+        													<td>Tony OSAWERE</td>
+        													<td>10,000.00 NGN</td>
+        													<td>20%</td>
         													<td>4 Months</td>
+        													<td>22/2/2020</td>
+        												</tr>
+        												<tr>
+        													<td>
+        														<a href="member.php">
+        															222211111
+        														</a>
+        													</td>
+        													<td>Stephen Osawaru</td>
+        													<td>100,000.00 NGN</td>
+        													<td>20%</td>
+        													<td>9 Months</td>
         													<td>22/2/2020</td>
         												</tr>
         											</tbody>
