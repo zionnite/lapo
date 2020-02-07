@@ -2,12 +2,8 @@
 	<button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
 		<span class="navbar-toggler-icon"></span>
 	</button>
-	<a class="navbar-brand" href="#">
-<!--		<img class="navbar-brand-full" src="assets/img/brand/logo_2.jpeg" width="115" height="55px" alt="CoreUI Logo">-->
-		<p>LAPO welfare Cooperative</p>
-<!--		<img class="navbar-brand-minimized" src="assets/img/brand/logo_2.jpeg" width="115" height="55px" alt="CoreUI Logo">-->
-		<p>LAPO welfare Cooperative</p>
-	</a>
+
+	<p style="margin-top: 1%; margin-left: 0.5%;font-weight: bold;font-size: 17px;">LAPO welfare Cooperative</p>
 	<button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
 		<span class="navbar-toggler-icon"></span>
 	</button>
