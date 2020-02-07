@@ -65,7 +65,12 @@
                   				</li>
                   				<li class="nav-item">
                   					<a class="nav-link" href="member.php">
-                  						<i class="fas fa-dot-circle"></i> View Member
+                  						<i class="fas fa-dot-circle"></i> Member Profile
+                  					</a>
+                  				</li>
+                  				<li class="nav-item">
+                  					<a class="nav-link" href="view_all_members.php">
+                  						<i class="fas fa-dot-circle"></i> View all Members
                   					</a>
                   				</li>
                   				<li class="nav-item">
@@ -171,11 +176,26 @@
                   							<i class="fas fa-flag"></i> Report
                   						</a>
                   					</li>
-                  					<li class="nav-item">
-                  						<a class="nav-link" href="inventory.php">
-                  							<i class="fas fa-briefcase"></i> Inventory
-                  						</a>
+
+                  					<li class="nav-item nav-dropdown">
+                  					<a class="nav-link nav-dropdown-toggle" href="#">
+                  						<i class="fas fa-briefcase"></i> Inventory</a>
+                  						<ul class="nav-dropdown-items">
+                  							<li class="nav-item">
+                  								<a class="nav-link" href="add_inventory.php">
+                  									<i class="fas fa-dot-circle"></i> Add Inventory
+                  								</a>
+                  							</li>
+                  							<li class="nav-item">
+                  								<a class="nav-link" href="inventory.php">
+                  									<i class="fas fa-dot-circle"></i> View Inventory
+                  								</a>
+                  							</li>
+
+                  						</ul>
                   					</li>
+
+
                   				</ul>
                   			</nav>
                   			<button class="sidebar-minimizer brand-minimizer" type="button"></button>
