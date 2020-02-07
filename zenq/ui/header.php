@@ -40,10 +40,10 @@
 				<div class="dropdown-header text-center">
 					<strong>Account</strong>
 				</div>
-				<a class="dropdown-item" href="view_account.html">
+				<a class="dropdown-item" href="member.php">
 					<i class="fa fa-user"></i> View Profile
 				</a>
-				<a class="dropdown-item" href="login.html">
+				<a class="dropdown-item" href="login.php">
 					<i class="fa fa-lock"></i> Logout
 				</a>
 			</div>

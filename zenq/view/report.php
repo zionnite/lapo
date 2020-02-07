@@ -26,7 +26,7 @@
 										<div class="col-md-4">
 											<div class="row">
 												<div class="col-md-2">
-													<img src="assets/img/avatars/8.jpg" class="img-circle" style="width:150px; height: 50px;" />
+													<img src="assets/users/pp.jpg" class="img-circle" style="width:150px; height: 50px;" />
 												</div>
 												<div class="col-md-10">
 													<h4>Full Name</h4>
@@ -97,7 +97,7 @@
 										</thead>
 										<tbody>
 											<tr>
-												<td>Jacital Emma </td>
+												<td>Stephen Osawaru </td>
 												<td>10/03/2020 </td>
 												<td>10/03/2020 </td>
 												<td>Monthly</td>
@@ -157,7 +157,7 @@
 													</thead>
 													<tbody>
 														<tr>
-															<td>Jacital Emma </td>
+															<td>Stephen Osawaru </td>
 															<td>a1000001 </td>
 															<td>cash</td>
 															<td>Jake Copeland</td>
@@ -166,7 +166,7 @@
 															<td><a href="#">Edit</a> || <a href="#">Delete</a></td>
 														</tr>
 														<tr>
-															<td>Jacital Emma </td>
+															<td>Stephen Osawaru </td>
 															<td>a1000001 </td>
 															<td>cash</td>
 															<td>Jake Copeland</td>
