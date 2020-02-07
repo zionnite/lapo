@@ -28,22 +28,22 @@
                   				</a>
                   			</li>
                   			<li class="nav-item">
-                  				<a class="nav-link" href="view_user.html">
+                  				<a class="nav-link" href="#">
                   					<i class="fas fa-dot-circle"></i> Savings
                   				</a>
                   			</li>
                   			<li class="nav-item">
-                  				<a class="nav-link" href="view_user.html">
+                  				<a class="nav-link" href="#">
                   					<i class="fas fa-dot-circle"></i> Dividends
                   				</a>
                   			</li>
                   			<li class="nav-item">
-                  				<a class="nav-link" href="view_user.html">
+                  				<a class="nav-link" href="#">
                   					<i class="fas fa-dot-circle"></i> Loan Interest
                   				</a>
                   			</li>
                   			<li class="nav-item">
-                  				<a class="nav-link" href="view_user.html">
+                  				<a class="nav-link" href="#">
                   					<i class="fas fa-dot-circle"></i> Staff Salary
                   				</a>
                   			</li>
@@ -162,7 +162,7 @@
                   						</ul>
                   					</li>
                   					<li class="nav-item">
-                  						<a class="nav-link" href="savings.php">
+                  						<a class="nav-link" href="#">
                   							<i class="fas fa-landmark"></i> Savings
                   						</a>
                   					</li>
