@@ -33,24 +33,25 @@
 								    <div class="card">
 								        <div class="card-body">
                                             <h3>Date Range</h3>
+                                            <form name="loanDueForm" id="loanDueForm" method="POST" action="#URL">
 								            <div class="row">
 								                <div class="col-md-5">
-                                                    <input class="form-control" id="interest" type="date" placeholder="">
+                                                    <input class="form-control" name="loanStartDate" id="loanStartDate" type="date" placeholder="">
                                                 </div>
 								                <div class="col-md-2 text-center">
                                                     <h6>To</h6>
                                                 </div>
 								                <div class="col-md-5">
-                                                    <input class="form-control" id="interest" type="date" placeholder="">
+                                                    <input class="form-control" name="loanEndDate" id="loanEndDate" type="date" placeholder="">
                                                 </div>
 								            </div>
 
 								            <div class="row">
                                                 <div class="col-md-12">
-                                                    <input id="interest" type="checkbox" value="yes">Include due loans with zero pending due amounts
+                                                    <input id="include_loan_due" type="checkbox" value="yes">Include due loans with zero pending due amounts
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <input id="interest" type="checkbox" value="yes">Include loans where system generated penalty is added between the above dates
+                                                    <input id="include_loan_generated" type="checkbox" value="yes">Include loans where system generated penalty is added between the above dates
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="row">
@@ -59,7 +60,7 @@
                                                     </div>
                                                 </div>
 								            </div>
-
+                                            </form>
 
 								        </div>
 								    </div>
@@ -75,7 +76,9 @@
         									<div class="card-body">
                                                 <div class="row">
                                                     <div class="col-md-2">
-                                                        <input class="form-control" id="search" type="text" placeholder="Search">
+                                                        <form name="loanSearchForm" id="loanSearchForm" method="POST" action="#URL">
+                                                            <input class="form-control" name="search" id="search" type="text" placeholder="Search">
+                                                        </form>
                                                     </div>
                                                 </div>
 

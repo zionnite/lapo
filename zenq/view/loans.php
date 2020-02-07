@@ -22,8 +22,10 @@
         						<div class="col-sm-12">
         							<div class="card text-white bg-white">
         								<div class="card-body">
-        									<input class="form-control" id="company" type="text" placeholder="Search for...">
+        								    <form name="loanSearchForm" id="loanSearchForm" method="POST" action="#URL">
+        									<input class="form-control" name="search" id="search" type="text" placeholder="Search for...">
         									<input type="submit" value="Search" class="mt-3 btn btn-success" />
+                                            </form>
         								</div>
         							</div>
         						</div>

@@ -25,23 +25,24 @@
 									<strong>New Member Transaction</strong>
 								</div>
 								<div class="card-body">
+								    <form name="transactionForm" id="transactionForm" method="POST" action="#URL">
 									<div class="form-group row">
 										<label for="amount" class="col-md-2 col-form-label">Member ID</label>
 										<div class="col-md-10">
-											<input class="form-control" id="amount" type="text" placeholder="Member ID">
+											<input class="form-control" name="transactionMemberID" id="transactionMemberID" type="text" placeholder="Member ID">
 										</div>
 									</div>
 
 									<div class="form-group row">
 										<label for="city" class="col-md-2 col-form-label">Amount</label>
 										<div class="col-md-10">
-											<input class="form-control" id="city" type="text" placeholder="Enter Amount">
+											<input class="form-control" name="transactionAmount" id="transactionAmount" type="text" placeholder="Enter Amount">
 										</div>
 									</div>
 									<div class="form-group row">
 										<label for="postal-code" class="col-md-2 col-form-label">Type</label>
 										<div class="col-md-10">
-											<select name="gender" class="form-control">
+											<select name="transactionType" id="transactionType" class="form-control">
 												<option>Select Type</option>
 												<option value="1">1</option>
 												<option value="2">2</option>
@@ -50,12 +51,13 @@
 										</div>
 									</div>
 									<div class="form-group row">
-										<label for="country" class="col-md-2 col-form-label">Summary</label>
+										<label for="transactionSummary" class="col-md-2 col-form-label">Summary</label>
 										<div class="col-md-10">
-                                            <textarea class="form-control" id="summary" placeholder="Short Or Long Description"></textarea>
+                                            <textarea class="form-control" name="transactionSummary" id="transactionSummary" placeholder="Short Or Long Description"></textarea>
 										</div>
 									</div>
 									<input type="submit" name="submit" class="btn btn-danger" value="Register User" />
+                                    </form>
 								</div>
 							</div>
 						</div>

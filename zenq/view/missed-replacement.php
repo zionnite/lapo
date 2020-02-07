@@ -32,10 +32,11 @@
 								<div class="col-sm-12 col-md-12 mt-1">
 								    <div class="card">
 								        <div class="card-body">
+                                           <form name="loanRepaymentForm" id="loanRepaymentForm" method="POST" action="#URL">
                                             <div class="form-group row">
         										<label for="amount" class="col-md-2 col-form-label">Overdue By</label>
         										<div class="col-md-10">
-        											<select class="form-control" name="overdue_days" id="inputOverdueDays">
+        											<select class="form-control" name="loanOverdue_days" id="loanOverdue_days">
         											    <option value="1" selected="">1 day</option>
         											    <option value="2">2 days</option>
         											    <option value="3">3 days</option>
@@ -402,21 +403,21 @@
         								    <div class="form-group row">
         										<label for="amount" class="col-md-2 col-form-label">Borrower Name / Business Name</label>
         										<div class="col-md-10">
-        											<input class="form-control" id="amount" type="text" placeholder="Borrower Name / Business Name">
+        											<input class="form-control" name="loanBorrower" id="loanBorrower" type="text" placeholder="Borrower Name / Business Name">
         										</div>
 
         									</div>
         								    <div class="form-group row">
         										<label for="amount" class="col-md-2 col-form-label">Loan</label>
         										<div class="col-md-10">
-        											<input class="form-control" id="amount" type="text" placeholder="Loan">
+        											<input class="form-control" name="loanAmount" id="loanAmount" type="text" placeholder="Loan">
         										</div>
 
         									</div>
         								    <div class="form-group row">
         										<label for="amount" class="col-md-2 col-form-label">All Loan Officer</label>
         										<div class="col-md-10">
-        											<select class="form-control" id="amount" type="text">
+        											<select class="form-control" value="loanOfficer" id="loanOfficer" type="text">
                                                         <option>Choose Type</option>
                                                         <option value="Bussiness Loan">Business Loan</option>
                                                         <option value="Overseas Worker Loan">Overseas Worker Loan</option>
@@ -430,7 +431,7 @@
         								    <div class="form-group row">
         										<label for="amount" class="col-md-2 col-form-label">Collateral Status</label>
         										<div class="col-md-10">
-        											<select class="form-control" id="amount" type="text">
+        											<select class="form-control" name="loanCollateralStatus" id="loanCollateralStatus" type="text">
                                                         <option value="Deposited into Branch">Deposited into Branch</option>
                                                         <option value="Collateral with Borrower">Collateral with Borrower</option>
                                                         <option value="Return to Borrower">Return to Borrower</option>
@@ -445,15 +446,16 @@
         									</div>
         									<div class="row">
 								                <div class="col-md-5">
-                                                    <input class="form-control" id="interest" type="date" placeholder="">
+                                                    <input class="form-control" value="loanStartDate" id="loanStartDate" type="date" placeholder="">
                                                 </div>
 								                <div class="col-md-2 text-center">
                                                     <h6>To</h6>
                                                 </div>
 								                <div class="col-md-5">
-                                                    <input class="form-control" id="interest" type="date" placeholder="">
+                                                    <input class="form-control" value="loanEndDate" id="loanEndDate" type="date" placeholder="">
                                                 </div>
 								            </div>
+                                            </form>
 								        </div>
 								    </div>
 								</div>
@@ -467,7 +469,9 @@
         									<div class="card-body">
                                                 <div class="row">
                                                     <div class="col-md-2">
-                                                        <input class="form-control" id="search" type="text" placeholder="Search">
+                                                        <form name="loanPrepareForm" id="loanPrepareForm" method="POST" action="#URL">
+                                                        <input class="form-control" name="search" id="search" type="text" placeholder="Search">
+                                                        </form>
                                                     </div>
                                                 </div>
 
