@@ -108,9 +108,9 @@
 										</div>
 									</div>
 									<div class="form-group row">
-										<label for="interest" class="col-md-2 col-form-label">Interest Type </label>
+										<label for="interest" class="col-md-2 col-form-label">Loan Interest %</label>
 										<div class="col-md-4">
-											<input type="text" id="loanInterestType_percent" class="form-control" placeholder="%" />
+											<input type="text" id="loanInterestRate" name="loanInterestRate" class="form-control" placeholder="%" />
 										</div>
 										<div class="col-md-4">
 											<select class="form-control" id="loanInterestPerType" name="loanInterestPerType" type="text">
@@ -316,7 +316,7 @@
 
                                     <div class="row" style="background: #d2d6de;">
 										<div class="col-sm-12 m-1 pt-1">
-											<h6>Loan Fees:</h6>
+											<h6>Extend Loan After Maturity Until Fully Paid:</h6>
 										</div>
 									</div>
 									<div class="col-sm-12 col-md-12 mt-1">

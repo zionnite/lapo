@@ -108,7 +108,7 @@
 										</div>
 									</div>
 									<div class="form-group row">
-										<label for="interest" class="col-md-2 col-form-label">Interest Type </label>
+										<label for="interest" class="col-md-2 col-form-label">Loan Interest % </label>
 										<div class="col-md-4">
 											<input type="text" id="loanInterestType_percent" class="form-control" placeholder="%" />
 										</div>
