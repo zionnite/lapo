@@ -48,8 +48,8 @@
                   											<tbody>
                   												<tr>
                   													<td>122109911 </td>
-                  													<td>James </td>
-                  													<td>Osital</td>
+                  													<td>Stephen </td>
+                  													<td>Osawaru</td>
                   													<td>email@email.com</td>
                   													<td>1234xxxx22</td>
                   													<td><span class="badge badge-success">Male</span></td>
@@ -71,9 +71,9 @@
                   												</tr>
                   												<tr>
                   													<td>112340009 </td>
-                  													<td>Jeninfer </td>
-                  													<td>Pascal</td>
-                  													<td>pasacal@email.com</td>
+                  													<td>Tony </td>
+                  													<td>Osawere</td>
+                  													<td>email@email.com</td>
                   													<td>1234xxxx22</td>
                   													<td><span class="badge badge-danger">Female</span></td>
                   													<td>12/3/1991</td>
