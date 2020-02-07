@@ -27,7 +27,7 @@
 									<div class="card-body">
 										<div class="row">
 											<div class="col-sm-2">
-												<img src="assets/img/avatars/8.jpg" class="img-circle" style="width:150px; height: 150px;" />
+												<img src="assets/users/zion.jpg" class="img-circle" style="width:150px; height: 150px;" />
 											</div>
 											<div class="col-sm-6" class="mt-10">
 												<div>
@@ -43,7 +43,7 @@
 													<h6>Account Number: <span></span></h6>
 													<h6>Account Balance: <span></span></h6>
 
-													<a href="view_transaction.html" class="btn btn-danger btn-block">Links to All Transaction</a>
+													<a href="expenses.php" class="btn btn-danger btn-block">Links to All Transaction</a>
 												</div>
 											</div>
 										</div>
