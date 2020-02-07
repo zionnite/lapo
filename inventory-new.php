@@ -14,7 +14,7 @@
 	<div class="app-body">
 		<?php require 'zenq/ui/sidebar.php';?>
 		<!-- THE VIEW -->
-		<?php require 'zenq/view/add-inventory.php';?>
+		<?php require 'zenq/view/inventory-new.php';?>
 	</div>
 	<?php require 'zenq/ui/footer.php';?>
 
