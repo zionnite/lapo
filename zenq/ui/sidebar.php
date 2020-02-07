@@ -169,7 +169,7 @@
 										<i class="fas fa-briefcase"></i> Inventory</a>
 										<ul class="nav-dropdown-items">
 											<li class="nav-item">
-												<a class="nav-link" href="add-inventory.php">
+												<a class="nav-link" href="inventory-new.php">
 													<i class="fas fa-dot-circle"></i> Add Inventory
 												</a>
 											</li>
