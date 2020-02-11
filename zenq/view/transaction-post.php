@@ -19,14 +19,14 @@
         				<div class="col-sm-10">
         					<div class="card">
         						<div class="card-header">
-        							<strong>Transaction</strong>
+        							<strong>Post Transaction</strong>
         						</div>
         						<div class="card-body">
         							<form name="transactionForm" id="transactionForm"  class="oform" method="POST" action="go.php">
         								<div class="form-group row">
         									<label for="MemberID" class="col-md-2 col-form-label">Member ID</label>
         									<div class="col-md-10">
-        										<input name="MemberID" id="MemberID" type="text" placeholder="Enter your MemberID" value="" class="form-control" required>
+        										<input name="MemberID" id="MemberID" type="text" placeholder="Enter your MemberID" value="<?php echo $MemberID;?>" class="form-control" required>
         									</div>
 
         								</div>
@@ -36,16 +36,15 @@
         									<div class="col-md-10">
         										<select name="transactionType" name="transactionType" class="form-control">
         											<option>Select Type</option>
-        											<option value="Savings">Savings</option>
-        											<option value="Withdrawal">Withdrawal</option>
-        											<option value="Loans Repayment">Loans Repayment</option>
+        											<option value="savings">Savings</option>
+        											<option value="withdrawal">Withdrawal</option>
         										</select>
         									</div>
         								</div>
         								<div class="form-group row">
         									<label for="street" class="col-md-2 col-form-label">Amount</label>
         									<div class="col-md-10">
-        										<input class="form-control" id="transactionAmount" name="transactionAmount" type="text" placeholder="Amount">
+        										<input class="form-control" id="transactionAmount" name="transactionAmount" type="number" placeholder="Amount">
         									</div>
         								</div>
         								<div class="form-group row">
@@ -56,7 +55,7 @@
         								</div>
 
 
-        								<input type="submit" name="submit" class="btn btn-danger" value="Post Transaction" />
+        								<input type="submit" name="submit" class="btn btn-primary" value="Post Transaction">
         							</div>
         						</div>
         					</div>
