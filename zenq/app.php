@@ -54,6 +54,16 @@ class App {
 		}
 	}
 
+	// View member's information
+	public static function member($value, $filter='BIND', $return='*'){
+		$sql = "SELECT {$return} FROM `user` WHERE `{$filter}` = '{$value}' LIMIT 1";
+		$rez = oSQL::run($sql);
+		if(empty($rez['errNo']) && $rez['numRows'] > 0){
+			$record = $rez['result']->fetch_all(MYSQLI_ASSOC);
+			return $record;
+		}
+	}
+
 
 
 }
