@@ -1,3 +1,4 @@
+<?php require 'go.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,16 +8,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<title>Lapo | Prepare Loans</title>
 	<?php require 'zenq/ui/css.php';?>
-
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
 	<?php require 'zenq/ui/header.php';?>
-
 	<div class="app-body">
 		<?php require 'zenq/ui/sidebar.php';?>
 		<!-- THE VIEW -->
 		<?php require 'zenq/view/loan-prepare.php';?>
-
 	</div>
 	<?php require 'zenq/ui/footer.php';?>
 	<?php require 'zenq/ui/js.php';?>
