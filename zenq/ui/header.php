@@ -3,7 +3,7 @@
 		<span class="navbar-toggler-icon"></span>
 	</button>
 
-	<p style="margin-top: 1%; margin-left: 0.5%;font-weight: bold;font-size: 17px;">LAPO welfare Cooperative</p>
+	<p style="margin-top: 1%; margin-left: 0.5%;font-weight: bold;font-size: 17px;">LAPO Cooperative</p>
 	<button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
 		<span class="navbar-toggler-icon"></span>
 	</button>

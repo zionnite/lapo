@@ -22,7 +22,7 @@
 									<div class="input-group-prepend">
 										<span class="input-group-text"><i class="icon-user"></i></span>
 									</div>
-									<input class="form-control" type="text" placeholder="Username" name="UserID">
+									<input class="form-control" type="text" placeholder="Username" name="UserID" required>
 								</div>
 								<div class="input-group mb-4">
 									<div class="input-group-prepend">
@@ -30,7 +30,7 @@
 											<i class="icon-lock"></i>
 										</span>
 									</div>
-									<input class="form-control" type="password" placeholder="Password" name="Password">
+									<input class="form-control" type="password" placeholder="Password" name="Password" required>
 								</div>
 								<div class="row">
 									<div class="col-6">

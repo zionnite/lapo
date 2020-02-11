@@ -6,8 +6,8 @@ class oData {
 
 		if(is_array($data)){
 			if(!empty($data[$input])){return $data[$input];}
-			elseif(is_null($data[$input])){return  '';}
-			elseif(isset($data[$input])){return  '';}
+			elseif(isset($data[$input])){return '';}
+			// else {return '';}
 		}
 		return FALSE;
 	}

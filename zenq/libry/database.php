@@ -8,22 +8,10 @@ class oDatabase extends mysqli {
 				exit('connection failed [' . $this->connect_errno . '] '.$this->connect_error);
 			}
 		}
+		else {
+			die ('NO DB CONFIG DATA');
+		}
 	}
-
-	// public function runSQL($sql){
-	// 	$runSQL['result'] = $this->query($sql);
-	// 	if(!empty($this->error)){
-	// 		$runSQL['errMsg'] = $this->error;
-	// 		$runSQL['errNo'] = $this->errno;
-	// 	}
-	// 	else {
-	// 		$runSQL['affectedRows'] = $this->affected_rows;
-	// 		if(is_object($runSQL['result'])){
-	// 			$runSQL['numRows'] = $runSQL['result']->num_rows;
-	// 		}
-	// 	}
-	// 	return $runSQL;
-	// }
 }
 
 $oDatabase = new oDatabase;
