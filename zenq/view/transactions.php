@@ -23,14 +23,14 @@
         							<div class="card text-white bg-white">
         								<div class="card-body">
         									<input class="form-control" id="company" type="text" placeholder="Search for...">
-        									<input type="submit" value="Search" class="mt-3 btn btn-success" />
+        									<input type="submit" value="Search" class="mt-3 btn btn-success">
         								</div>
         							</div>
         						</div>
         						<div class="col-sm-12">
         							<div class="card">
         								<div class="card-header">
-        									<i class="fa fa-align-justify"></i> View all Transation</div>
+        									<i class="fa fa-align-justify"></i> View All Transation</div>
         									<div class="card-body">
         										<table class="table table-responsive-sm table-striped">
         											<thead>
