@@ -1,6 +1,9 @@
 <?php
 require 'zenq/init.php';
-echo $oRefPage = oRoute::ref();
+$oRefPage = oRoute::ref();
 
-echo oDATA::oRead('UserID', 'oPOST');
+$app = new App();
+
+if($oRefPage == 'login'){$app->login();}
+elseif($oRefPage == 'member-new'){$app->member_new();}
 ?>
