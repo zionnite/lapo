@@ -14,23 +14,19 @@
 
 			<li class="nav-item nav-dropdown"><a class="nav-link nav-dropdown-toggle" href="#"><i class="fas fa-money-bill"></i>Transactions</a>
 				<ul class="nav-dropdown-items">
-					<li class="nav-item"><a class="nav-link" href="member-new.php"><i class="fas fa-notes-medical"></i></i>New Transaction</a></li>
-					<li class="nav-item"><a class="nav-link" href="members.php"><i class="fas fa-readme"></i>View All Transactions</a></li>
+					<li class="nav-item"><a class="nav-link" href="transaction-post.php"><i class="fas fa-notes-medical"></i></i>Post Transaction</a></li>
+					<li class="nav-item"><a class="nav-link" href="transactions.php"><i class="fab fa-readme"></i>View All Transactions</a></li>
 				</ul>
 			</li>
 
 
 
 
-			<li class="nav-item nav-dropdown">
+<!-- 			<li class="nav-item nav-dropdown">
 				<a class="nav-link nav-dropdown-toggle" href="#">
 					<i class="fas fa-address-book"></i>Account</a>
 					<ul class="nav-dropdown-items">
-						<!-- <li class="nav-item">
-							<a class="nav-link" href="member-new.php">
-								<i class="fas fa-dot-circle"></i>Create Account
-							</a>
-						</li> -->
+
 						<li class="nav-item">
 							<a class="nav-link" href="#">
 								<i class="fas fa-dot-circle"></i>Savings
@@ -57,7 +53,7 @@
 							</a>
 						</li>
 					</ul>
-				</li>
+				</li> -->
 
 				<!-- <li class="nav-item nav-dropdown">
 					<a class="nav-link nav-dropdown-toggle" href="#">
