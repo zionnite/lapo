@@ -43,6 +43,17 @@ class App {
 		}
 	}
 
+	// View all members
+	public static function members($return=''){
+		$sql = "SELECT * FROM `user` WHERE `Type` = 1 ORDER BY `LastName` ASC";
+		$rez = oSQL::run($sql);
+		if(empty($rez['errNo']) && $rez['numRows'] > 0){
+			$record = $rez['result']->fetch_all(MYSQLI_ASSOC);
+			if($return == 'JSON'){return json_encode($record);}
+			return $record;
+		}
+	}
+
 
 
 }
