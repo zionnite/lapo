@@ -64,6 +64,11 @@ class oRoute {
 			}
 			$rez = './?view='.$rez;
 		}
+		elseif($type == 'oPage'){
+			if($link == 'oGET'){
+				$rez = self::page();
+			}
+		}
 		return strtolower($rez);
 	}
 
