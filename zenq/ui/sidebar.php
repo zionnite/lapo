@@ -7,16 +7,15 @@
 				<ul class="nav-dropdown-items">
 					<li class="nav-item"><a class="nav-link" href="member-new.php"><i class="fas fa-user-plus"></i></i>New Member</a></li>
 					<li class="nav-item"><a class="nav-link" href="members.php"><i class="fas fa-users"></i>View All Members</a></li>
-					<!-- <li class="nav-item">
-						<a class="nav-link" href="member.php">
-							<i class="fas fa-dot-circle"></i>Member Profile
-						</a>
-					</li> -->
-					<!-- <li class="nav-item">
-						<a class="nav-link" href="contributions.php">
-							<i class="fas fa-dot-circle"></i>Contributions
-						</a>
-					</li> -->
+				</ul>
+			</li>
+
+
+
+			<li class="nav-item nav-dropdown"><a class="nav-link nav-dropdown-toggle" href="#"><i class="fas fa-money-bill"></i>Transactions</a>
+				<ul class="nav-dropdown-items">
+					<li class="nav-item"><a class="nav-link" href="member-new.php"><i class="fas fa-notes-medical"></i></i>New Transaction</a></li>
+					<li class="nav-item"><a class="nav-link" href="members.php"><i class="fas fa-readme"></i>View All Transactions</a></li>
 				</ul>
 			</li>
 
@@ -60,7 +59,7 @@
 					</ul>
 				</li>
 
-				<li class="nav-item nav-dropdown">
+				<!-- <li class="nav-item nav-dropdown">
 					<a class="nav-link nav-dropdown-toggle" href="#">
 						<i class="fas fa-link"></i>Transaction</a>
 						<ul class="nav-dropdown-items">
@@ -104,7 +103,7 @@
 									</ul>
 								</li>
 							</ul>
-						</li>
+						</li> -->
 						<li class="nav-item nav-dropdown">
 							<a class="nav-link nav-dropdown-toggle" href="#">
 								<i class="fas fa-balance-scale"></i>Loans</a>
