@@ -53,10 +53,10 @@
                   													<td align="right"><?php echo '₦'.number_format($member['Savings']);?></td>
                   													<td align="right"><?php echo '₦'.number_format($member['Loans']);?></td>
                   													<td align="center" style="width: 8%">
-                  														<a href="./?view=new-transaction&ID=<?php echo $customer['EUID'];?>" class="btn btn-sm btn-success" title="Post Transaction"><i class="fas fa-wallet"></i>Post</a>
+                  														<a href="./transaction-post.php?MID=<?php echo $member['BIND'];?>" class="btn btn-sm btn-success" title="Post Transaction"><i class="fas fa-wallet"></i>Post</a>
                   													</td>
                   													<td align="center" style="width: 8%">
-                  														<a href="./?view=new-transaction&ID=<?php echo $customer['EUID'];?>" class="btn btn-sm btn-primary" title="Prepare Loan"><i class="fas fa-money-check-alt"></i>Loan</a>
+                  														<a href="./loan-prepare?MID=<?php echo $member['BIND'];?>" class="btn btn-sm btn-primary" title="Prepare Loan"><i class="fas fa-money-check-alt"></i>Loan</a>
                   													</td>
 
                   														<!-- <div class="dropdown">
