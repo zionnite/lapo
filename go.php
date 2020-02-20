@@ -12,7 +12,6 @@ if(oMethod::isGet('MID')){
 	$MID = oData::oRead('MID', 'oPOST');
 }
 
-
 if(!empty($MID)){
 	$Member = $app->member($MID, 'BIND', 'MemberID');
 	if(!empty($Member['MemberID'])){$MemberID = $Member['MemberID'];}
@@ -25,4 +24,4 @@ elseif($oPage == 'members'){$members = $app->members();}
 elseif($oRefPage == 'transaction-post' && $oPage == 'go'){$app->transaction_post();}
 elseif($oRefPage == 'loan-prepare' && $oPage == 'go'){$app->loan_prepare();}
 elseif($oRefPage == 'loan-payment' && $oPage == 'go'){$app->loan_payment();}
-?>
+?> 
