@@ -68,13 +68,13 @@
 											<div class="form-group row">
 												<label for="interest" class="col-md-2 col-form-label">Principal Amount</label>
 												<div class="col-md-10">
-													<input class="form-control" id="Principal" name="Principal" type="number" placeholder="Principal Amount">
+													<input class="form-control" id="Principal" name="Principal" type="number" placeholder="Principal Amount" value="200000">
 												</div>
 											</div>
 											<div class="form-group row">
 												<label for="interest" class="col-md-2 col-form-label">Loan Release Date </label>
 												<div class="col-md-10">
-													<input class="form-control" id="ReleaseDate" name="ReleaseDate" type="date" placeholder="Number of Months">
+													<input class="form-control" id="ReleaseDate" name="ReleaseDate" type="date" placeholder="Date Released" required>
 												</div>
 											</div>
 											<hr />
@@ -121,7 +121,7 @@
 											<div class="form-group row">
 												<label for="interest" class="col-md-2 col-form-label"></label>
 												<div class="col-md-4">
-													<input type="number" class="form-control" id="Duration" name="Duration" placeholder="300" min="1" value="12">
+													<input type="number" class="form-control" id="Duration" name="Duration" placeholder="300" min="1" value="10">
 												</div>
 												<div class="col-md-4">
 													<select class="form-control" id="DurationUnit" name="DurationUnit">
@@ -154,7 +154,7 @@
 											<div class="form-group row">
 												<label for="interest" class="col-md-2 col-form-label">Number of Repayments</label>
 												<div class="col-md-10">
-													<input type="number" name="RepaymentCount" id="RepaymentCount" class="form-control" placeholder="700" min="1" value="12">
+													<input type="number" name="RepaymentCount" id="RepaymentCount" class="form-control" placeholder="700" min="1" value="10">
 												</div>
 											</div>
 											<hr />
