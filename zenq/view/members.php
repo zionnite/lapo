@@ -39,7 +39,7 @@
                   												<th>Gender</th>
                   												<th>Savings</th>
                   												<th>Loans</th>
-                  												<th colspan="3">MANAGE</th>
+                  												<th colspan="4">MANAGE</th>
                   											</tr>
                   										</thead>
                   										<tbody>
@@ -53,13 +53,16 @@
                   													<td align="right"><?php echo '₦'.number_format($member['Savings']);?></td>
                   													<td align="right"><?php echo '₦'.number_format($member['Loans']);?></td>
                   													<td align="center" style="width: 8%">
-                  														<a href="./transaction-post.php?MID=<?php echo $member['BIND'];?>" class="btn btn-sm btn-success" title="Post Transaction"><i class="fas fa-wallet"></i>Transaction</a>
+                  														<a href="./transaction-post.php?MID=<?php echo $member['BIND'];?>" class="btn-sm btn-warning" title="Post Transaction">Transaction</a>
                   													</td>
                   													<td align="center" style="width: 8%">
-                  														<a href="./loan-prepare.php?MID=<?php echo $member['BIND'];?>" class="btn btn-sm btn-primary" title="Prepare Loan"><i class="fas fa-money-check-alt"></i>New Loan</a>
+                  														<a href="./loan-prepare.php?MID=<?php echo $member['BIND'];?>" class="btn-sm btn-primary" title="Prepare Loan">New Loan</a>
                   													</td>
                   													<td align="center" style="width: 8%">
-                  														<a href="./loan-payment.php?MID=<?php echo $member['BIND'];?>" class="btn btn-sm btn-success" title="Prepare Loan"><i class="fas fa-money-check-alt"></i>Pay Loan</a>
+                  														<a href="./loan-payment.php?MID=<?php echo $member['BIND'];?>" class="btn-sm btn-success" title="Prepare Loan">Pay Loan</a>
+                  													</td>
+                  													<td align="center" style="width: 8%">
+                  														<a href="./loan-view.php?MID=<?php echo $member['BIND'];?>" class="btn-sm btn-danger" title="View Loan Payments">View Loan</a>
                   													</td>
 
                   														<!-- <div class="dropdown">
