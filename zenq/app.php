@@ -123,7 +123,18 @@ class App {
 		$serviceLoanInput['LoanID'] = $LoanID;
 		$serviceLoanInput['date'] = $date;
 
-		#if interest has not been paid fully
+		// #when amount is equal monthly total payment due
+		// if($amount == $loan['TotalPer']){
+
+		// 	$amtPayInterest = $loan['InterestPer'];
+		// 	self::serviceLoan($serviceLoanInput, $amtPayInterest, 'interest');
+
+		// 	$amtPayPrincipal = $loan['PrincipalPer'];
+		// 	self::serviceLoan($serviceLoanInput, $amtPayPrincipal, 'principal');
+		// }
+		// else {
+
+			#if interest has not been paid fully
 		$amountBal = $amount + $loan['Credit'];
 		$countNow = $loan['InterestCount'];
 		while (self::canPayInterest($amountBal, $loan['InterestPer'], $countNow)){
@@ -142,21 +153,11 @@ class App {
 		}
 
 		#add balance to credit
-		if($amountBal > 0){
-			$sqlU = "UPDATE `loan` SET `Credit` = '{$amountBal}' WHERE `MemberID` = '".$serviceLoanInput['MemberID']."' LIMIT 1;";
-			oSQL::run($sqlU);
-		}
-		oRoute::redirect('members.php?state=success');
-		// #when amount is equal monthly total payment due
-		// if($amount == $loan['TotalPer']){
-
-		// 	$amtPayInterest = $loan['InterestPer'];
-		// 	self::serviceLoan($serviceLoanInput, $amtPayInterest, 'interest');
-
-		// 	$amtPayPrincipal = $loan['PrincipalPer'];
-		// 	self::serviceLoan($serviceLoanInput, $amtPayPrincipal, 'principal');
-		// 	oRoute::redirect('members.php?state=success');
+		$sqlU = "UPDATE `loan` SET `Credit` = '{$amountBal}' WHERE `MemberID` = '".$serviceLoanInput['MemberID']."' LIMIT 1;";
+		oSQL::run($sqlU);
 		// }
+		oRoute::redirect('members.php?state=success');
+
 		// elseif($amount > $loan['TotalPer']){
 
 		// 	$amtPayInterest = $loan['InterestPer'];
