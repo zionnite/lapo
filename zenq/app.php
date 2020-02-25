@@ -74,6 +74,33 @@ class App {
 		}
 	}
 
+	// Loan view payments
+	public static function loan_view($type){
+		$loan =  self::lastloan($_GET['MID'], 'Member');
+		if(!empty($loan)){
+			$LoanID = $loan['LoanID'];
+			$sql = "SELECT * FROM `loan_transaction` WHERE `LoanID` = '".$LoanID."' AND `type` = '{$type}'";
+			$rez = oSQL::run($sql);
+			if(empty($rez['errNo']) && $rez['numRows'] > 0){
+				$record = $rez['result']->fetch_all(MYSQLI_ASSOC);
+				return $record;
+			}
+		}
+	}
+
+	public static function totalLoanPayment(){
+		$loan =  self::lastloan($_GET['MID'], 'Member');
+		if(!empty($loan)){
+			$LoanID = $loan['LoanID'];
+			$sql = "SELECT SUM(`Amount`) AS SumTotal FROM `loan_transaction` WHERE `LoanID` = '".$LoanID."'";
+			$rez = oSQL::run($sql);
+			if(empty($rez['errNo']) && $rez['numRows'] > 0){
+				$record = $rez['result']->fetch_all(MYSQLI_ASSOC);
+				return $record[0]['SumTotal'];
+			}
+		}
+	}
+
 
 	// Post new transaction
 	public static function transaction_post(){
