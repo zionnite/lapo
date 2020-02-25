@@ -116,33 +116,95 @@ class App {
 		$date = oDATA::oRead('transactionDate', 'oPOST');
 
 		$loan = self::lastloan($MemberID, 'MemberID');
+		$LoanID = $loan['LoanID'];
 
-		$monthPrincipal = ($loan['IntPrin'] - $loan['Interest']);
-		$monthInterest = $loan['Interest'];
-		$monthTotal = $loan['IntPrin'];
+		$serviceLoanInput['MemberBIND'] = $MemberBIND;
+		$serviceLoanInput['MemberID'] = $MemberID;
+		$serviceLoanInput['LoanID'] = $LoanID;
+		$serviceLoanInput['date'] = $date;
 
-		if($amount > $loan['IntPrin']){
-			//remove principal for current month
-			$paymentPrincipal = ($amount - $monthTotal);
-			// $paymentBal = ($amount - $monthTotal);
-			// $paymentBal = ($amount - $monthTotal);
-
+		#if interest has not been paid fully
+		$amountBal = $amount + $loan['Credit'];
+		$countNow = $loan['InterestCount'];
+		while (self::canPayInterest($amountBal, $loan['InterestPer'], $countNow)){
+			$amtPayInterest = $loan['InterestPer'];
+			self::serviceLoan($serviceLoanInput, $amtPayInterest, 'interest');
+			$amountBal = $amountBal - $loan['InterestPer'];
+			$countNow = $countNow - 1;
 		}
-		die;
 
-		// $savings = ($row['Savings'] + $amount);
-		// $sql = "UPDATE `user` SET `Savings` = '{$savings}' WHERE `MemberID` = '{$MemberID}' LIMIT 1;";
-		// $rez = oSQL::run($sql);
+		$countNowP = $loan['PrincipalCount'];
+		while (self::canPayInterest($amountBal, $loan['PrincipalPer'], $countNowP)){
+			$amtPayPrincipal = $loan['PrincipalPer'];
+			self::serviceLoan($serviceLoanInput, $amtPayPrincipal, 'principal');
+			$amountBal = $amountBal - $loan['PrincipalPer'];
+			$countNowP = $countNowP - 1;
+		}
 
-		// $sql = " INSERT INTO `transaction` (`BIND`, `Member`, `MemberID`, `Amount`, `Type`, `TransDate`, `TransID`)
-		// VALUES ('$BIND', '$MemberBIND', '$MemberID', '$amount', '$type', '$date', '$TransID')";
-		// $rez = oSQL::run($sql);
-		// if(!empty($rez['errNo'])){
-		// 	#Todo ~ error in query (everywhere)
+		#add balance to credit
+		if($amountBal > 0){
+			$sqlU = "UPDATE `loan` SET `Credit` = '{$amountBal}' WHERE `MemberID` = '".$serviceLoanInput['MemberID']."' LIMIT 1;";
+			oSQL::run($sqlU);
+		}
+		oRoute::redirect('members.php?state=success');
+		// #when amount is equal monthly total payment due
+		// if($amount == $loan['TotalPer']){
+
+		// 	$amtPayInterest = $loan['InterestPer'];
+		// 	self::serviceLoan($serviceLoanInput, $amtPayInterest, 'interest');
+
+		// 	$amtPayPrincipal = $loan['PrincipalPer'];
+		// 	self::serviceLoan($serviceLoanInput, $amtPayPrincipal, 'principal');
+		// 	oRoute::redirect('members.php?state=success');
 		// }
-		// else {
-		// 	oRoute::redirect(oRoute::ref().'.php?state=success');
+		// elseif($amount > $loan['TotalPer']){
+
+		// 	$amtPayInterest = $loan['InterestPer'];
+		// 	self::serviceLoan($serviceLoanInput, $amtPayInterest, 'interest');
+
+		// 	$amtPayPrincipal = $loan['PrincipalPer'];
+		// 	self::serviceLoan($serviceLoanInput, $amtPayPrincipal, 'principal');
+
+		// 	#remove paid from amount balance
+		// 	$amountBal = $amount - $loan['TotalPer'];
+
 		// }
+
+	}
+
+	public static function canPayInterest($amount, $interest, $count){
+		if(($count > 0) && ($amount >= $interest)){return true;}
+		return false;
+	}
+
+	public static function canPayPrincipalDue($amount, $principal, $count){
+		if(($count > 0) && ($amount >= $principal)){return true;}
+		return false;
+	}
+
+
+	public static function serviceLoan($service, $amtPay, $type){
+		$alpha = chr(rand() > 0.5 ? rand(65, 90) : rand(97,122));
+		$BIND = $alpha.mt_rand(10000000,99999999);
+		$TransID = mt_rand(10000000,99999999);
+		$sql = " INSERT INTO `loan_transaction` (`BIND`, `Member`, `MemberID`, `LoanID`, `Amount`, `Type`, `TransDate`, `TransID`)
+		VALUES ('$BIND', '$service[MemberBIND]', '$service[MemberID]', '$service[LoanID]', '$amtPay', '$type', '$service[date]', '$TransID')";
+		oSQL::run($sql);
+
+		#find loan & update count
+		$foundLoan = self::lastloan($service['MemberID'], 'MemberID');
+
+		if($type == 'principal'){
+			$countNow = $foundLoan['PrincipalCount'] - 1;
+			$sqlU = "UPDATE `loan` SET `PrincipalCount` = '{$countNow}' WHERE `MemberID` = '".$service['MemberID']."' LIMIT 1;";
+		}
+		elseif($type == 'interest'){
+			$countNow = $foundLoan['InterestCount'] - 1;
+			$sqlU = "UPDATE `loan` SET `InterestCount` = '{$countNow}' WHERE `MemberID` = '".$service['MemberID']."' LIMIT 1;";
+		}
+
+		oSQL::run($sqlU);
+		return;
 	}
 
 
@@ -157,26 +219,33 @@ class App {
 
 		$type = oDATA::oRead('Type', 'oPOST');
 		$DisbursedAs = oDATA::oRead('DisbursedAs', 'oPOST');
-		$Principal = oDATA::oRead('Principal', 'oPOST');
 		$ReleaseDate = oDATA::oRead('ReleaseDate', 'oPOST');
+
+		$Principal = oDATA::oRead('Principal', 'oPOST');
 		$InterestRate = oDATA::oRead('InterestRate', 'oPOST');
 		$Duration = oDATA::oRead('Duration', 'oPOST');
-		$Interest = ($InterestRate * 100)/$Duration;
-		$IntPrin = ($Principal/$Duration) + $Interest;
+
+		$TotalInterest = (($InterestRate/100) * $Principal);
+		$TotalPayment = $Principal + $TotalInterest;
+
+		$InterestPer = $TotalInterest/$Duration;
+		$PrincipalPer = $Principal/$Duration;
+		$TotalPer = $PrincipalPer+$InterestPer;
+
 		$RepaymentCycle = oDATA::oRead('RepaymentCycle', 'oPOST');
-		$RepaymentCount = oDATA::oRead('RepaymentCount', 'oPOST');
-		// $RepaymentCycle = oDATA::oRead('RepaymentCycle', 'oPOST');
-		// $RepaymentCycle = oDATA::oRead('RepaymentCycle', 'oPOST');
-		// $RepaymentCycle = oDATA::oRead('RepaymentCycle', 'oPOST');
+		#$RepaymentCount = oDATA::oRead('RepaymentCount', 'oPOST');
+		$RepaymentCount = $Duration;
+
+
+		$sql = " INSERT INTO `loan` (`BIND`, `Member`, `MemberID`, `Type`, `DisbursedAs`, `Principal`, `ReleaseDate`, `InterestRate`, `Duration`, `InterestPer`, `PrincipalPer`, `LoanID`, `RepaymentCycle`, `RepaymentCount`, `TotalInterest`, `TotalPayment`, `TotalPer`, `InterestCount`, `PrincipalCount`)
+		VALUES ('$BIND', '$MemberBIND', '$MemberID', '$type', '$DisbursedAs', '$Principal', '$ReleaseDate', '$InterestRate', '$Duration', '$InterestPer', '$PrincipalPer', '$LoanID', '$RepaymentCycle', '$RepaymentCount', '$TotalInterest', '$TotalPayment', '$TotalPer', '$Duration', '$Duration')";
+		$rez = oSQL::run($sql);
+
 		$row = self::member($MemberID, 'MemberID', 'Loans');
 		$loans = ($row['Loans'] + $Principal);
-		$sql = "UPDATE `user` SET `Loans` = '{$loans}' WHERE `MemberID` = '{$MemberID}' LIMIT 1;";
-		$rez = oSQL::run($sql);
+		$sqlU = "UPDATE `user` SET `Loans` = '{$loans}' WHERE `MemberID` = '{$MemberID}' LIMIT 1;";
+		$rez = oSQL::run($sqlU);
 
-
-		$sql = " INSERT INTO `loan` (`BIND`, `Member`, `MemberID`, `Type`, `DisbursedAs`, `Principal`, `ReleaseDate`, `InterestRate`, `Duration`, `Interest`, `IntPrin`, `LoanID`, `RepaymentCycle`, `RepaymentCount`)
-		VALUES ('$BIND', '$MemberBIND', '$MemberID', '$type', '$DisbursedAs', '$Principal', '$ReleaseDate', '$InterestRate', '$Duration', '$Interest', '$IntPrin', '$LoanID', '$RepaymentCycle', '$RepaymentCount')";
-		$rez = oSQL::run($sql);
 		if(!empty($rez['errNo'])){} #Todo ~ error in query (everywhere)
 		else{
 			oRoute::redirect(oRoute::ref().'.php?state=success');
