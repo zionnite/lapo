@@ -105,7 +105,7 @@
 											<div class="form-group row">
 												<label for="interest" class="col-md-2 col-form-label">Loan Interest % </label>
 												<div class="col-md-4">
-													<input type="number" id="InterestRate" name="InterestRate" class="form-control" placeholder="%" value="12">
+													<input type="number" id="InterestRate" name="InterestRate" class="form-control" placeholder="%" value="10">
 												</div>
 												<div class="col-md-4">
 													<select class="form-control" id="loanInterestPerType" name="loanInterestPerType" type="text">
